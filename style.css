@@ -26,3 +26,17 @@ h1 {
   height: 80px;
   border-radius: 50%;
 }
+
+.turnBox {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  float: right;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+
+
+

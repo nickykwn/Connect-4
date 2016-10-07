@@ -6,6 +6,8 @@ console.log('It has loaded!');
 //     board[i] = [];
 //     for(let j = 0; j<7; j++){
 //       board[j].push('*');
+          var $discspots = $('.spots');
+          $discspots.click();
 
 //     }
 //   }
@@ -24,7 +26,7 @@ var $color = $('.spots');
 if(whoisTurnIsIt === 'red') {
   changeBackgroundToRed();
 } else {
-  changeBackgroundToBlack
+  changeBackgroundToBlack();
 }
 
 function changeBackgroundToRed() {
