@@ -1,9 +1,28 @@
 body {
-
+  background-color: yellow;
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: red;
   font-size: 30px;
+}
+
+#gameboard {
+  width: 600px;
+  height: 500px;
+  background-color: blue;
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.spots {
+  flex-direction: column;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
