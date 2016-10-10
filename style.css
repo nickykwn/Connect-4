@@ -2,6 +2,10 @@ body {
   background-color: yellow;
 }
 
+#landing {
+  background-color: brown;
+}
+
 h1 {
   text-align: center;
   color: red;
