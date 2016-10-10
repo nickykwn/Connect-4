@@ -1,5 +1,8 @@
 console.log('It has loaded!');
+var whoseTurnIsIt = 'red';
 var connect4 = createArray();
+
+//function to create a nested array for the connect 4 board
 function createArray() {
   var board = [];
   for(let i = 0; i<6; i++){
@@ -19,12 +22,11 @@ function dropDisc(color, columnIndex) {
     } else {
       tryDropDisc(columnIndex, rowIndex-1);
     }
-  }
+  } x6
   tryDropDisc(columnIndex, 5)
 }
 
 //checks whose turn it is and displays the color of whose turn it is in the box
-var whoseTurnIsIt = 'red';
 function switchTurns(previousColor) {
   if (previousColor === 'red') {
     whoseTurnIsIt = changeBackgroundToBlack();
@@ -34,12 +36,12 @@ function switchTurns(previousColor) {
   $('.turnBox').html(whoseTurnIsIt);
 }
 
-// var $color = $('.spots');
-// if(whoisTurnIsIt === 'red') {
-//   changeBackgroundToRed();
-// } else {
-//   changeBackgroundToBlack();
-// }
+var $color = $('.spots');
+if(whoisTurnIsIt === 'red') {
+  changeBackgroundToRed();
+} else {
+  changeBackgroundToBlack();
+}
 
 //functions to change the background of spots on the board
 function changeBackgroundToRed() {
