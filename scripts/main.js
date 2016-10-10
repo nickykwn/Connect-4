@@ -1,34 +1,47 @@
 console.log('It has loaded!');
-// var connect4 = createArray();
-// function createArray() {
-//   var board = [];
-//   for(let i = 0; i<6; i++){
-//     board[i] = [];
-//     for(let j = 0; j<7; j++){
-//       board[j].push('*');
-          var $discspots = $('.spots');
-          $discspots.click();
+var connect4 = createArray();
+function createArray() {
+  var board = [];
+  for(let i = 0; i<6; i++){
+    board[i] = [];
+    for(let j = 0; j<7; j++){
+      board[j].push('*');
+    }
+  }
+}
 
-//     }
-//   }
-//   return board;
-// }
+//Player function to drop a colored Disc down and check if the row below it is filled
+function dropDisc(color, columnIndex) {
+  function tryDropDisc(columnIndex, rowIndex) {
+    if (board['column'+columnIndex]['row'+rowIndex]['value'] === 'empty') {
+      board['column'+columnIndex]['row'+rowIndex]['value'] = color;
+      switchTurns(color);
+    } else {
+      tryDropDisc(columnIndex, rowIndex-1);
+    }
+  }
+  tryDropDisc(columnIndex, 5)
+}
+
+//checks whose turn it is and displays the color of whose turn it is in the box
+var whoseTurnIsIt = 'red';
 function switchTurns(previousColor) {
   if (previousColor === 'red') {
-    whoisTurnIsIt = 'black'
+    whoseTurnIsIt = changeBackgroundToBlack();
   } else {
-    whoisTurnIsIt = 'red';
+    whoseTurnIsIt = changeBackgroundToRed();
   }
-  document.getElementsByClassName('turnBox')[0].innerHTML = whoisTurnIsIt;
+  $('.turnBox').html(whoseTurnIsIt);
 }
 
-var $color = $('.spots');
-if(whoisTurnIsIt === 'red') {
-  changeBackgroundToRed();
-} else {
-  changeBackgroundToBlack();
-}
+// var $color = $('.spots');
+// if(whoisTurnIsIt === 'red') {
+//   changeBackgroundToRed();
+// } else {
+//   changeBackgroundToBlack();
+// }
 
+//functions to change the background of spots on the board
 function changeBackgroundToRed() {
   event.target.style.backgroundColor = 'red';
 }
