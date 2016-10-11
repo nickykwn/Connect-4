@@ -14,8 +14,8 @@ h1 {
   font-family: 'Ropa Sans', sans-serif;
 }
 
-.spot.blue{
-  background-color: blue;
+.spot.black{
+  background-color: black;
 }
 .spot.red{
   background-color: red;
@@ -23,7 +23,7 @@ h1 {
 #gameboard {
   width: 600px;
   height: 500px;
-  background-color: green;
+  background-color: blue;
   text-align: center;
   position: relative;
   display: inline-flex;

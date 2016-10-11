@@ -22,8 +22,8 @@ $('.spot').on('click', function(event) {
         currentSpot.addClass(whoseTurnIsIt);
         validSelection = true;
         if (whoseTurnIsIt == 'red'){
-          whoseTurnIsIt = 'blue';
-          $('.turnBox').css('background', 'blue');
+          whoseTurnIsIt = 'black';
+          $('.turnBox').css('background', 'black');
         }else{
           whoseTurnIsIt = 'red';
           $('.turnBox').css('background', 'red');
