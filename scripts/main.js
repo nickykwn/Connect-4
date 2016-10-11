@@ -35,6 +35,12 @@ $('.spot').on('click', function(event) {
     }
 });
 
+function checkForWin() {
+  if($('.spot') === 'red'){
+
+  }
+}
+
 //function to create a nested array for the connect 4 board
 // function createArray() {
 //   var board = [];

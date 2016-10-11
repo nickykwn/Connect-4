@@ -1,5 +1,6 @@
 body {
   background-color: yellow;
+  font-family: 'Ropa Sans', sans-serif;
 }
 
 #landing {
@@ -10,6 +11,7 @@ h1 {
   text-align: center;
   color: red;
   font-size: 30px;
+  font-family: 'Ropa Sans', sans-serif;
 }
 
 .spot.blue{
@@ -44,12 +46,18 @@ h1 {
   float: right;
   margin-right: 50px;
   margin-top: 20px;
+  font-family: 'Ropa Sans', sans-serif;
 }
 
 .turnBox {
   background-color: red;
   width: 100px;
   height: 100px;
+}
+
+.signup {
+  font-family: 'Ropa Sans', sans-serif;
+  color: orange;
 }
 
 @media only screen and (max-device-width: 768px) and (orientation : portrait) {
