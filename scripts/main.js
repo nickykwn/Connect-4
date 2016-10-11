@@ -3,8 +3,13 @@ console.log('It has loaded!');
 var whoseTurnIsIt = 'red';
 var board = $('.spot');
 
-// function to add click event for all the spots on the connect 4 board
-//
+/* function to add click event for all the spots on the connect 4 board
+ loop checks whole board to match the attribute of the specific spot on
+ board. Board is set up into columns and grabs the columns to see the atrribute
+ in the spot that is being selected by click. Checks in the column for the next
+ available spot that is empty to place a disc in for the player whose turn it is.
+ Also gives a player indicator box to let the players know whose turn it is.
+*/
 $('.spot').on('click', function(event) {
   var element = $(event.target);
     var col = element.attr('data-column');
