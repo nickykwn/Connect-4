@@ -34,11 +34,16 @@ $('.spot').on('click', function(event) {
       }
     }
 });
+function checkVertical() {
 
-function checkForWin() {
-  if($('.spot') === 'red'){
+}
 
-  }
+function checkHorizontal() {
+
+}
+
+function checkDiagonal() {
+
 }
 
 //function to create a nested array for the connect 4 board
