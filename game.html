@@ -3,83 +3,57 @@
 <head>
   <title>Connect 4</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="scripts/main.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 <body>
   <h1>Connect Four</h1>
-  <!-- var board;
-  var currentPlayer;
-  init(){
-    board = $('.spot');
-    currentPlayer = 'red';
-  }
-  $('.spot').on('click',function(e,element){
-    var element = e.target;
-    var col = element.attribute('data-column');
-    var validSelection = false;
-    for (var x = 41 ; x > 0; x--; )
-      var currentSpot = board[x];
-      var currentCol = currentSpot.attr('data-column');
-      if (currentSpot.hasClass('empty') && currentCol == col){
-        currentSpot.removeClass('empty');
-        currentSpot.addClass(currentPlayer);
-        validSelection = true;
-      }
-      if (!validSelection){
-        return;
-      }
-      if (currentPlayer == 'red'){
-        currentPlayer = 'blue';
-      }else{
-        currentPlayer = 'red';
-      }
-
-  }) -->
   <div id = "gameboard">
-    <div data-column=1 class = "col-1 spots empty"></div>
-    <div class = "col-2 spots empty"></div>
-    <div class = "col-3 spots empty"></div>
-    <div class = "col-4 spots"></div>
-    <div class = "col-5 spots"></div>
-    <div class = "col-6 spots"></div>
-    <div class = "col-7 spots"></div>
-    <div class = "col-1 spots"></div>
-    <div class = "col-2 spots"></div>
-    <div class = "col-3 spots"></div>
-    <div class = "col-4 spots"></div>
-    <div class = "col-5 spots"></div>
-    <div class = "col-6 spots"></div>
-    <div class = "col-7 spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
-    <div class = "spots"></div>
+    <div data-column=1 class = "empty spot"></div>
+    <div data-column=2 class = "empty spot"></div>
+    <div data-column=3 class = "empty spot"></div>
+    <div data-column=4 class = "empty spot"></div>
+    <div data-column=5 class = "empty spot"></div>
+    <div data-column=6 class = "empty spot"></div>
+    <div data-column=7 class = "empty spot"></div>
+    <div data-column=1 class = "empty spot"></div>
+    <div data-column=2 class = "empty spot"></div>
+    <div data-column=3 class = "empty spot"></div>
+    <div data-column=4 class = "empty spot"></div>
+    <div data-column=5 class = "empty spot"></div>
+    <div data-column=6 class = "empty spot"></div>
+    <div data-column=7 class = "empty spot"></div>
+    <div data-column=1 class = "empty spot"></div>
+    <div data-column=2 class = "empty spot"></div>
+    <div data-column=3 class = "empty spot"></div>
+    <div data-column=4 class = "empty spot"></div>
+    <div data-column=5 class = "empty spot"></div>
+    <div data-column=6 class = "empty spot"></div>
+    <div data-column=7 class = "empty spot"></div>
+    <div data-column=1 class = "empty spot"></div>
+    <div data-column=2 class = "empty spot"></div>
+    <div data-column=3 class = "empty spot"></div>
+    <div data-column=4 class = "empty spot"></div>
+    <div data-column=5 class = "empty spot"></div>
+    <div data-column=6 class = "empty spot"></div>
+    <div data-column=7 class = "empty spot"></div>
+    <div data-column=1 class = "empty spot"></div>
+    <div data-column=2 class = "empty spot"></div>
+    <div data-column=3 class = "empty spot"></div>
+    <div data-column=4 class = "empty spot"></div>
+    <div data-column=5 class = "empty spot"></div>
+    <div data-column=6 class = "empty spot"></div>
+    <div data-column=7 class = "empty spot"></div>
+    <div data-column=1 class = "empty spot"></div>
+    <div data-column=2 class = "empty spot"></div>
+    <div data-column=3 class = "empty spot"></div>
+    <div data-column=4 class = "empty spot"></div>
+    <div data-column=5 class = "empty spot"></div>
+    <div data-column=6 class = "empty spot"></div>
+    <div data-column=7 class = "empty spot"></div>
     </div>
+    <div id ="whoseTurn"> Whose turn is it:
     <div class = "turnBox"></div>
+    </div>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

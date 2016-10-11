@@ -1,6 +1,30 @@
 console.log('It has loaded!');
 var whoseTurnIsIt = 'red';
-var connect4 = createArray();
+var board = $('.spot');
+$('.spot').on('click', function(event) {
+  var element = $(event.target);
+    var col = element.attr('data-column');
+    var validSelection = false;
+    for (var x = 41; x >=0; x--){
+      var currentSpot = $(board[x]);
+      var currentCol = currentSpot.attr('data-column');
+      if (currentSpot.hasClass('empty') && currentCol == col){
+        currentSpot.removeClass('empty');
+        currentSpot.addClass(whoseTurnIsIt);
+        validSelection = true;
+        if (whoseTurnIsIt == 'red'){
+          whoseTurnIsIt = 'blue';
+          $('.turnBox').css('background', 'blue');
+        }else{
+          whoseTurnIsIt = 'red';
+          $('.turnBox').css('background', 'red');
+        }
+      }
+      if (validSelection){
+        return;
+      }
+    }
+});
 
 //function to create a nested array for the connect 4 board
 function createArray() {
@@ -8,46 +32,46 @@ function createArray() {
   for(let i = 0; i<6; i++){
     board[i] = [];
     for(let j = 0; j<7; j++){
-      board[j].push('*');
+      // board[j].push('*');
     }
   }
 }
 
 //Player function to drop a colored Disc down and check if the row below it is filled
-function dropDisc(color, columnIndex) {
-  function tryDropDisc(columnIndex, rowIndex) {
-    if (board['column'+columnIndex]['row'+rowIndex]['value'] === 'empty') {
-      board['column'+columnIndex]['row'+rowIndex]['value'] = color;
-      switchTurns(color);
-    } else {
-      tryDropDisc(columnIndex, rowIndex-1);
-    }
-  } x6
-  tryDropDisc(columnIndex, 5)
-}
+// function dropDisc(color, columnIndex) {
+//   function tryDropDisc(columnIndex, rowIndex) {
+//     if (board['column'+columnIndex]['row'+rowIndex]['value'] === 'empty') {
+//       board['column'+columnIndex]['row'+rowIndex]['value'] = color;
+//       switchTurns(color);
+//     } else {
+//       tryDropDisc(columnIndex, rowIndex-1);
+//     }
+//   } x6
+//   tryDropDisc(columnIndex, 5)
+// }
 
 //checks whose turn it is and displays the color of whose turn it is in the box
-function switchTurns(previousColor) {
-  if (previousColor === 'red') {
-    whoseTurnIsIt = changeBackgroundToBlack();
-  } else {
-    whoseTurnIsIt = changeBackgroundToRed();
-  }
-  $('.turnBox').html(whoseTurnIsIt);
-}
+// function switchTurns(previousColor) {
+//   if (previousColor === 'red') {
+//     whoseTurnIsIt = changeBackgroundToBlack();
+//   } else {
+//     whoseTurnIsIt = changeBackgroundToRed();
+//   }
+//   $('.turnBox').html(whoseTurnIsIt);
+// }
 
-var $color = $('.spots');
-if(whoisTurnIsIt === 'red') {
-  changeBackgroundToRed();
-} else {
-  changeBackgroundToBlack();
-}
+// var $color = $('.spots');
+// if(whoisTurnIsIt === 'red') {
+//   changeBackgroundToRed();
+// } else {
+//   changeBackgroundToBlack();
+// }
 
-//functions to change the background of spots on the board
-function changeBackgroundToRed() {
-  event.target.style.backgroundColor = 'red';
-}
+// //functions to change the background of spots on the board
+// function changeBackgroundToRed() {
+//   event.target.style.backgroundColor = 'red';
+// }
 
-function changeBackgroundToBlack() {
-  event.target.style.backgroundColor = 'black';
-}
+// function changeBackgroundToBlack() {
+//   event.target.style.backgroundColor = 'black';
+// }
